@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import WeatherCard from './components/WeatherCard';
-import LoadingOverlay from './components/LoadingOverlay';
+import SkeletonWeatherCard from './components/SkeletonWeatherCard';
 import { fetchWeatherData } from './utils/api';
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
         )}
         
         {loading ? (
-          <LoadingOverlay />
+          <SkeletonWeatherCard />
         ) : (
           <WeatherCard weatherData={weatherData} />
         )}
