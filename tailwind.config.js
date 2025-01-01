@@ -17,6 +17,8 @@ export default {
         'scale': 'scale 2s ease-in-out infinite',
         'rotate': 'rotate 3s linear infinite',
         'wave': 'wave 2s ease-in-out infinite',
+        'shimmer': 'shimmer 2s infinite linear',
+        'pulse': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         float: {
@@ -34,6 +36,10 @@ export default {
         wave: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
         },
         fadeIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },
